@@ -12,9 +12,11 @@ for row in table:
     print(row)
 def dualF(F):
     reversed = []
+
     for row in table:
         reversed.append(int(not row[3]))
     dual = reversed[::-1]
+
     return dual
 print("Двоїста F*: ")
 print(dualF(F))
@@ -138,7 +140,6 @@ def monotone(x, y, z, F):
 
             if ( x[i] >= x[j] and y[i] >= y[j] and z[i] >= z[j] and F[i] < F[j] ):
                 return True
-
     return False
 
 if monotone(x, y, z, F):
