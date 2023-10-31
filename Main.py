@@ -143,9 +143,9 @@ def monotone(x, y, z, F):
     return False
 
 if monotone(x, y, z, F):
-    print("Функція є монотонною.")
+    print("Функція монотонна.")
 else:
-    print("Функція не є монотонною.")
+    print("Функція не монотонна.")
 
 def linear(x, y, z, F):
     if "∧" not in polynomialZhegalkin(x, y, z, F):
