@@ -113,7 +113,7 @@ print("Поліном Жегалкіна:")
 print(polynomialZhegalkin(x, y, z, F))
 
 def const0(F):
-        if all (value == 0 for value in F):
+        if(F[0] == 0):
             print("Функція зберігає константу 0.")
         else:
             print("Функція не зберігає константу 0.")
@@ -121,10 +121,10 @@ const0(F)
 
 
 def const1(F):
-    if all(value == 1 for value in F):
-        print("Функція зберігає константу 1.")
-    else:
-        print("Функція не зберігає константу 1.")
+        if(F[7] == 1):
+            print("Функція зберігає константу 1.")
+        else:
+            print("Функція не зберігає константу 1.")
 const1(F)
 
 def selfDual(F):
