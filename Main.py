@@ -137,10 +137,13 @@ selfDual(F)
 def monotone(x, y, z, F):
     for i in range(len(x)):
         for j in range(i + 1, len(x)):
-
-            if ( x[i] >= x[j] and y[i] >= y[j] and z[i] >= z[j] and F[i] < F[j] ):
-                return True
-    return False
+            if F[i] > F[j]:
+                if x[i] <= x[j] and y[i] <= y[j] and z[i] <= z[j]:
+                    return False
+            elif F[i] < F[j]:
+                if x[i] >= x[j] and y[i] >= y[j] and z[i] >= z[j]:
+                    return False
+    return True
 
 if monotone(x, y, z, F):
     print("Функція монотонна.")
